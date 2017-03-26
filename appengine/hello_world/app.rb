@@ -16,6 +16,17 @@
 require "sinatra"
 
 get "/" do
-  "Hello world!"
+  "Hello world da Riccardo su GAE (ruby-docs-samples/appengine/hello_world on palladius.ruby-docs-samples repo)! \n Click also on /ricc-says"
 end
+
+get '/ricc-says' do
+  'Project id: ric-cccwiki <br/>\nProject number: TODO<br/>\nRepo: git@github.com:palladius/ruby-docs-samples.git
+<br/>\nVERSION: OTODO `cat VERSION`'
+end
+
+# UNTESTED!
+get '/VERSION' do
+	File.read('./VERSION')
+end
+
 # [END app]
